@@ -67,3 +67,6 @@ function printFullName2({nombre, apellido}){
 
  const {nombre: name,  ciudad: city} = usuario;
  console.log(name, city);
+
+
+//hola

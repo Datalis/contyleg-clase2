@@ -10,7 +10,7 @@ function printName(){
         nombre:"Julia",
         apellido:"macias",
         edad:"20",
-        ciudad:"guayaquil"
+        ciudad:"guayaquilGu"
     }
 }
 

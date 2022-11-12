@@ -13,4 +13,6 @@ console.log(sum2(2,2));
 const datos =[ {nombre:"rosa",_id: 1},
                 {nombre:"julia",_id: 2}]
 
-//const rosa = datos.map(elemen => )
+    
+const ids = datos.map(elem => ({...elem, nombre: elem._id % 2=== 0 ? `${elem.nombre}-par`:`${elem.nombre}-impar`}) );
+console.log(ids)

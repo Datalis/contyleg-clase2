@@ -18,15 +18,19 @@ const axios = require('axios');
 
 //Funcion Aync await
 async function test(){
-    const data = await axios.post('https://viatics.xoait.com/validate-physical-invoice', {
-        "emissionDate": "2022-08-02",
-        "printingAuth": "1130292611",
-        "ruc": "1801193531001",
-        "externDocTypeId": "01",
-        "docNum": "001-001-000012501"
-    })
+    try {
+        const data = await axios.post('https://viatics.xoait.com/validate-physical-invoice', {
+            "emissionDate": "2022-08-02",
+            "printingAuth": "1130292611",
+            "ruc": "1801193531001",
+            "externDocTypeId": "01",
+            "docNum": "001-001-000012501"
+        })
+        console.log(data)
+    } catch (error) {
+        console.log("Se produjo un error en la consulta: ", error)
+    }
     
-    console.log(data)
 }
 
 console.log("Ejecutando...")

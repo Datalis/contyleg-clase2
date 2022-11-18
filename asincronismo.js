@@ -33,9 +33,9 @@ async function test(){
     
 }
 
-console.log("Ejecutando...")
 
 test();
 
+console.log("Ejecutando...")
 
 

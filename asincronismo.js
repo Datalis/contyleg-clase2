@@ -7,11 +7,30 @@ const promise = axios.post('https://viatics.xoait.com/validate-physical-invoice'
     "externDocTypeId": "01",
     "docNum": "001-001-000012501"
 });
-
-promise.then(resp =>{
-    console.log(resp.data);
+ function resolveAfter2Seconds(){
+ return promise.then(resp =>{
+    //console.log(resp.data);
+    return resp.data
 }).catch(e=>{
     console.error(e);
 })
+}
+
+
 // la respuesta imprimir asyn await
+async function asyncCall() {
+    console.log('calling');
+    try {
+        const result = await resolveAfter2Seconds();
+    console.log(result);
+    console.log('fin');
+    } catch (error) {
+        console.error(e);
+    }
+    
+    // expected output: "resolved"
+  }
+  
+  asyncCall();
+  
 
